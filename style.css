@@ -1146,3 +1146,9 @@ img { color: transparent; }
   font-weight: 900;
   letter-spacing: .05em;
 }
+
+.hero-media {
+  background-image: url('Ônibus-Executivo.webp');
+  background-size: cover;
+  background-position: center;
+}
