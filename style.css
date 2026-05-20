@@ -319,6 +319,9 @@ p { color: var(--gray-txt); max-width: 65ch; }
   position: absolute;
   inset: 0;
   z-index: 0;
+  background-image: url('Ônibus-Executivo.webp');
+  background-size: cover;
+  background-position: center;
 }
 .hero-media img {
   width: 100%;
@@ -1145,10 +1148,4 @@ img { color: transparent; }
   font-size: .85rem;
   font-weight: 900;
   letter-spacing: .05em;
-}
-
-.hero-media {
-  background-image: url('Van.webp');
-  background-size: cover;
-  background-position: center;
 }
