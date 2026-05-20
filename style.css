@@ -319,9 +319,6 @@ p { color: var(--gray-txt); max-width: 65ch; }
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url('Ônibus-Executivo.webp');
-  background-size: cover;
-  background-position: center;
 }
 .hero-media img {
   width: 100%;
@@ -1078,6 +1075,16 @@ p { color: var(--gray-txt); max-width: 65ch; }
 
   h2 { font-size: 1.5rem; }
   h1 { font-size: 2rem; }
+
+  /* Overlay mais claro no celular para a imagem aparecer */
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(26,4,8,.55) 0%,
+      rgba(26,4,8,.70) 60%,
+      rgba(26,4,8,.85) 100%
+    );
+  }
 }
 
 /* ── Small mobile ≤ 480px ────────────────────────── */
@@ -1096,32 +1103,7 @@ p { color: var(--gray-txt); max-width: 65ch; }
 /* Oculta o ícone padrão de imagem quebrada */
 img { color: transparent; }
 
-/* ── Hero background placeholder ── */
-.hero-media {
-  background:
-    linear-gradient(135deg, #1A0408 0%, #3D0A12 50%, #1A0408 100%);
-}
-/* Padrão geométrico sutil no hero quando sem foto */
-.hero-media::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      rgba(192,24,44,.06) 0px,
-      rgba(192,24,44,.06) 1px,
-      transparent 1px,
-      transparent 60px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      rgba(192,24,44,.06) 0px,
-      rgba(192,24,44,.06) 1px,
-      transparent 1px,
-      transparent 60px
-    );
-}
+/* ── Hero background placeholder (só usado se não tiver background-image definido) ── */
 
 /* ── Fleet card image placeholders ── */
 .fleet-card img {
