@@ -1235,7 +1235,7 @@ p { color: var(--gray-txt); max-width: 65ch; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   gap: 2rem;
   align-items: center;
 }
@@ -1261,6 +1261,28 @@ p { color: var(--gray-txt); max-width: 65ch; }
   transition: color var(--transition);
 }
 .footer-links a:hover { color: var(--white); }
+
+.footer-social {
+  display: flex;
+  gap: .6rem;
+  justify-content: flex-end;
+}
+.footer-social a {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  color: rgba(255,255,255,.60);
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+.footer-social a:hover {
+  color: var(--white);
+  border-color: var(--white);
+  background: rgba(255,255,255,.08);
+}
+.footer-social svg { width: 19px; height: 19px; }
 
 /* ============================================================
    WHATSAPP FLOAT
@@ -1354,6 +1376,7 @@ p { color: var(--gray-txt); max-width: 65ch; }
 
   .footer-grid      { grid-template-columns: 1fr; text-align: center; }
   .footer-links     { justify-content: center; }
+  .footer-social    { justify-content: center; }
 
   .hero { min-height: 0; }
   .hero-content { padding-block: 3rem 3.5rem; }
@@ -1381,6 +1404,134 @@ p { color: var(--gray-txt); max-width: 65ch; }
 
   h1 { font-size: 1.6rem; }
 }
+
+/* ============================================================
+   PAGINAS LEGAIS (Politica de Privacidade)
+   ============================================================ */
+.legal-copy {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.legal-copy h1 {
+  color: var(--dark);
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  margin-bottom: .5rem;
+}
+
+.legal-copy h2 {
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  margin-top: 2.5rem;
+  margin-bottom: .75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--gray-lt);
+}
+
+.legal-copy p { margin-top: .875rem; }
+
+.legal-updated {
+  font-family: var(--font-label);
+  font-size: .82rem;
+  color: var(--gray-mid);
+  margin-bottom: 1.75rem;
+}
+
+.legal-copy address {
+  background: var(--off-white);
+  border-left: 3px solid var(--red);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+  font-size: .9rem;
+  line-height: 1.9;
+  color: var(--gray-txt);
+}
+.legal-copy address strong { color: var(--dark); }
+
+.legal-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: .7rem;
+}
+.legal-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--gray-txt);
+  max-width: 65ch;
+}
+.legal-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+}
+.legal-list strong { color: var(--dark); }
+
+.legal-copy a {
+  color: var(--red);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal-copy a:hover { color: var(--red-dark); }
+
+/* ============================================================
+   PAGINA 404
+   ============================================================ */
+.error-content {
+  max-width: 620px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.error-code {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 18vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.04em;
+  color: var(--red);
+  opacity: .18;
+  margin-bottom: -.35em;
+}
+
+.error-content h1 {
+  color: var(--dark);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+.error-content p { margin-inline: auto; }
+
+.error-content .hero-actions {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.error-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--gray-lt);
+}
+.error-links a {
+  font-family: var(--font-label);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  transition: color var(--transition);
+}
+.error-links a:hover { color: var(--red); }
 
 /* ============================================================
    PLACEHOLDERS DE IMAGEM
